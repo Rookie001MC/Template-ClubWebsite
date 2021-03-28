@@ -1,0 +1,14 @@
+.navbar-nav{
+    font-size: 16px;
+}
+
+nav.navbar{
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+   background-color: #1266f1;
+}
+
+
+nav.navbar.transparent {
+  background-color:rgba(0,0,0,0);
+}
