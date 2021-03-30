@@ -1,9 +1,7 @@
-// Initial state
-var scrollPos = 0;
-// adding scroll event
-window.addEventListener("scroll", function () {
-  // detects new state and compares it with the new one
-  if (document.body.getBoundingClientRect().top > scrollPos) {
+var currentScrollPos = document.documentElement.scrollTop;
+window.onscroll = function() {
+  var showNav = "590";
+  if (currentScrollPos < showNav) {
     document.getElementsByClassName("navbar")[0].classList.add("transparent");
     document.getElementsByClassName("fa-bars")[0].style.color = "white";
     document.getElementsByClassName("navbar-brand")[0].style.color = "white";
@@ -14,9 +12,9 @@ window.addEventListener("scroll", function () {
     document.getElementsByClassName("fa-bars")[0].style.color = "black";
     document.getElementsByClassName("navbar-brand")[0].style.color = "black";
   }
-  // saves the new position for iteration.
-  scrollPos = document.body.getBoundingClientRect().top;
-});
+  currentScrollPos = document.documentElement.scrollTop;
+}
+
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
