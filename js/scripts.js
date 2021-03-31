@@ -46,3 +46,4 @@ function closeNav() {
   document.getElementById("main").style.marginRight = "0";
   document.getElementById("mySidenav").style.boxShadow = "0 0 0 0";
 }
+

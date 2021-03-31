@@ -16,11 +16,9 @@
       rel="stylesheet"
     />
     <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
-      rel="stylesheet"
-    />
+    <link href="./css/MDBoostrap/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/GLightbox/glightbox.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -157,7 +155,7 @@
               class="bg-image hover-overlay ripple shadow-2-strong"
               data-mdb-ripple-color="light"
             >
-              <img src="./img/eh.jpg" class="img-fluid" />
+              <img src="./media/img/eh.jpg" class="img-fluid" />
               <a href="#!">
                 <div
                   class="mask"
@@ -188,7 +186,7 @@
           <!-- Cards of DaHouse -->
           <div class="row ms-4 mt-4 text-center">
             <div class="col-md-4 mb-4">
-              <div class="card text-center border border-success p-3">
+              <div class="card text-center border border-3 border-success p-3">
                 <div class="card-body">
                   <i
                     class="card-title fas fa-laptop"
@@ -202,7 +200,7 @@
             </div>
 
             <div class="col-md-4 mb-4">
-              <div class="card text-center border border-danger p-3">
+              <div class="card text-center border border-3 border-danger p-3">
                 <div class="card-body">
                   <i
                     class="card-title fas fa-paint-brush"
@@ -216,7 +214,7 @@
             </div>
 
             <div class="col-md-4 mb-4">
-              <div class="card text-center border border-primary p-3">
+              <div class="card text-center border border-3 border-primary p-3">
                 <div class="card-body">
                   <i
                     class="card-title fas fa-brain"
@@ -239,19 +237,100 @@
       <!-- Proof of Work -->
       <section>
         <div class="container my-5">
-          <div class="text-center mb-5">
-            <h2><strong>Our Work</strong></h2>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center mb-5">
+                <h2><strong>Our Work</strong></h2>
+                <hr />
+              </div>
+              <div class="grid-container">
+                <div class="big_image">
+                  <a
+                    href="./media/img/full-scale/8.jpg"
+                    class="lightbox_gallery"
+                    data-glightbox="description: .custom-desc1"
+                  >
+                    <img src="./media/img/small/8_small.jpg" alt="image" />
+                  </a>
+
+                  <div class="glightbox-desc custom-desc1">
+                    <h2><strong>Sunset Flowers</strong></h2>
+                    <br />
+                    <h3>Taken by: Rookie Nguyễn</h3>
+                    <br />
+                    <a
+                      class="btn btn-primary btn-lg btn-floating"
+                      style="background-color: #3b5998"
+                      href="https://facebook.com/RealRookie001"
+                      role="button"
+                    >
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                    <a
+                      class="btn btn-primary btn-lg btn-floating"
+                      style="background-color: #ac2bac"
+                      href="https:/instagram.com/realrookie001"
+                      role="button"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="long_image">
+                  <a
+                    href="./media/img/full-scale/5.jpg"
+                    class="lightbox_gallery"
+                    data-glightbox="description: .custom-desc1"
+                  >
+                    <img src="./media/img/small/5_small.jpg" alt="image" />
+                  </a>
+
+                  <div class="glightbox-desc custom-desc1">
+                    <h2><strong>Sunset Flowers</strong></h2>
+                    <br />
+                    <h3>Taken by: Rookie Nguyễn</h3>
+                    <br />
+                    <a
+                      class="btn btn-primary btn-lg btn-floating"
+                      style="background-color: #3b5998"
+                      href="https://facebook.com/RealRookie001"
+                      role="button"
+                    >
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                    <a
+                      class="btn btn-primary btn-lg btn-floating"
+                      style="background-color: #ac2bac"
+                      href="https:/instagram.com/realrookie001"
+                      role="button"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="slightly_bigger_image"></div>
+                <div class="another_slightly_bigger_image"></div>
+                <div class="small_image"></div>
+                <div class="small_image_2"></div>
+                <div class="small_image_3"></div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="container"></div>
       </section>
     </main>
   </body>
   <!-- MDB -->
-  <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
-  ></script>
+  <script type="text/javascript" src="./js/MDBootstrap/mdb.min.js"></script>
   <script type="text/javascript" src="./js/scripts.js"></script>
+  <script type="text/javascript" src="./js/GLightbox/glightbox.js"></script>
+  <script>
+    var lightbox = GLightbox();
+    lightbox.on("open", (target) => {
+      console.log("Opened Lightbox");
+    });
+    var gallery = GLightbox({
+      selector: ".lightbox_gallery",
+    });
+  </script>
 </html>

@@ -1,59 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 
-html{
-  background-color: rgb(0,0 ,0);
+html {
+  background-color: rgb(0, 0, 0);
 }
 /* Set animation for carousel and jumbotron */
-@keyframes fadeInCarousel{
-    0%{
-        filter: brightness(0%);
-    }
-    100%{
-        filter: brightness(50%);
-    }
+@keyframes fadeInCarousel {
+  0% {
+    filter: brightness(0%);
+  }
+  100% {
+    filter: brightness(50%);
+  }
 }
 
-.card{
-    box-shadow: 0mm 2mm 25px;
+.card {
+  box-shadow: 0mm 2mm 25px;
 }
 
 /* Set animation for carousel */
 .carousel-item img {
-    position: relative;
-    height: auto;
-    animation-duration: 1s;
-    animation-name: fadeInCarousel;
-    animation-fill-mode: forwards;
-    height: 651px;
-  }
+  position: relative;
+  height: auto;
+  animation-duration: 1s;
+  animation-name: fadeInCarousel;
+  animation-fill-mode: forwards;
+  height: 651px;
+}
 
-  /* Move the caption of carousel to the center left side */
-.carousel-caption{
+/* Move the caption of carousel to the center left side */
+.carousel-caption {
   font-size: 20px;
   top: 45%;
   text-align: start;
-  font-family: 'Merriweather Sans', sans-serif;
-} 
+  font-family: "Merriweather Sans", sans-serif;
+}
 /* Important for above */
-.item{
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+.item {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 /* Set font for navbar and jumbotron */
-.navbar{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    background-color: #06d1f5;
-    box-shadow: 1px 1px 5px black;
+.navbar {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background-color: #06d1f5;
+  box-shadow: 1px 1px 5px black;
 }
 
 nav.navbar.transparent,
 a.navbar-brand.transparent,
 span.fas.fa-bars.transparent {
-  background-color:rgba(0,0,0,0);
-  color:rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
   transition: 0.4s ease;
 }
 
@@ -65,7 +65,7 @@ span.fas.fa-bars.transparent {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0;
-  background-color: #06D1F5; /* Black*/
+  background-color: #06d1f5; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -98,18 +98,62 @@ span.fas.fa-bars.transparent {
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-  transition: margin-right .5s;
+  transition: margin-right 0.5s;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
-
-.card{
+.card {
   width: 85%;
   box-shadow: 1px 1px 15px 2px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 18px 12px;
+  grid-template-areas:
+    "big_image big_image big_image"
+    "long_image slightly_bigger_image slightly_bigger_image"
+    "long_image another_slightly_bigger_image another_slightly_bigger_image"
+    "small_image small_image_2 small_image_3";
+}
+
+.big_image {
+  grid-area: big_image;
+  margin-left: 7.5rem;
+}
+
+.long_image {
+  grid-area: long_image;
+  padding-top: 2rem;
+}
+
+.slightly_bigger_image {
+  grid-area: slightly_bigger_image;
+}
+
+.another_slightly_bigger_image {
+  grid-area: another_slightly_bigger_image;
+}
+
+.small_image {
+  grid-area: small_image;
+}
+
+.small_image_2 {
+  grid-area: small_image_2;
+}
+
+.small_image_3 {
+  grid-area: small_image_3;
 }
