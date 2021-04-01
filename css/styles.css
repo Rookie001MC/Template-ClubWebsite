@@ -116,44 +116,6 @@ span.fas.fa-bars.transparent {
   box-shadow: 1px 1px 15px 2px;
 }
 
-.gallery-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 18px 12px;
-  grid-template-areas:
-    "big_image big_image big_image"
-    "long_image slightly_bigger_image slightly_bigger_image"
-    "long_image another_slightly_bigger_image another_slightly_bigger_image"
-    "small_image small_image_2 small_image_3";
-}
-
-.big_image {
-  grid-area: big_image;
-  margin-left: 7.5rem;
-}
-
-.long_image {
-  grid-area: long_image;
-  padding-top: 2rem;
-}
-
-.slightly_bigger_image {
-  grid-area: slightly_bigger_image;
-}
-
-.another_slightly_bigger_image {
-  grid-area: another_slightly_bigger_image;
-}
-
-.small_image {
-  grid-area: small_image;
-}
-
-.small_image_2 {
-  grid-area: small_image_2;
-}
-
-.small_image_3 {
-  grid-area: small_image_3;
+.long_image{
+  padding-left: 3rem;
 }
